@@ -177,3 +177,92 @@ footer {
     border-top: 1px solid rgba(138, 59, 255, 0.2);
     color: var(--text-muted);
 }
+
+/* --- ESTILOS DEL CATÁLOGO EXPANDIBLE --- */
+.catalog-category {
+    background-color: var(--bg-panel);
+    border: 1px solid var(--neon-purple);
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(138, 59, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+.catalog-category:hover {
+    border-color: var(--neon-cyan);
+    box-shadow: 0 0 15px rgba(46, 198, 214, 0.4);
+}
+
+/* El título de la sección */
+summary {
+    font-family: 'VT323', monospace;
+    font-size: 1.8rem;
+    color: var(--neon-cyan-light);
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none; /* Quita la flecha por defecto */
+    text-shadow: 0 0 5px var(--neon-cyan);
+    transition: background 0.3s;
+}
+
+summary::-webkit-details-marker {
+    display: none; /* Quita la flecha en Safari/Chrome */
+}
+
+summary:hover {
+    background-color: rgba(46, 198, 214, 0.1);
+}
+
+/* La flechita personalizada */
+.arrow {
+    font-size: 1rem;
+    color: var(--neon-purple-light);
+    transition: transform 0.3s ease;
+}
+
+/* Cuando está abierto, rota la flecha */
+details[open] .arrow {
+    transform: rotate(180deg);
+}
+
+details[open] summary {
+    border-bottom: 1px solid var(--neon-purple);
+    background-color: rgba(138, 59, 255, 0.1);
+}
+
+/* --- CUADRÍCULA DE IMÁGENES (GALERÍA) --- */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+    padding: 1.5rem;
+    animation: fadeInUp 0.5s ease-out;
+}
+
+.gallery-item {
+    border-radius: 6px;
+    overflow: hidden;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    position: relative;
+    aspect-ratio: 1 / 1; /* Hace que las imágenes sean cuadradas */
+}
+
+/* Efecto al pasar el mouse por la imagen */
+.gallery-item:hover {
+    border-color: var(--neon-cyan);
+    box-shadow: 0 0 15px var(--neon-cyan);
+    transform: scale(1.05);
+    z-index: 2;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
