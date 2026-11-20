@@ -1,87 +1,100 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ghostbar | Portafolio</title>
-    <link rel="stylesheet" href="style.css">
-    <!-- Fuentes de Google -->
-    <link href="https://fonts.googleapis.com/css2?family=VT323&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0A0F1A">
+  <title>ghostbar | Portafolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=VT323&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Efecto de fondo estilo galaxia -->
-    <div class="bg-glow"></div>
+  <div class="bg-glow" aria-hidden="true"></div>
+  <header class="site-header">
+    <a class="brand" href="#inicio" aria-label="Ghostbar, inicio"><img src="avatar.png" alt="Fantasma pixel art"><span>ghostbar</span></a>
+    <nav aria-label="Navegación principal">
+      <a href="#inicio">Inicio</a><a href="#catalogo">Catálogo</a><a href="#contacto">Contacto</a>
+    </nav>
+  </header>
 
-    <main class="container">
-        <!-- Header / Avatar -->
-        <header class="hero">
-            <div class="ghost-avatar">
-                <!-- Puedes reemplazar esto con tu imagen real luego -->
-                <span>👻</span>
-            </div>
-            <h1 class="glitch-title">ghostbar</h1>
-            <p class="subtitle">Desarrollador & Creador Digital</p>
-        </header>
+  <main>
+    <section class="hero container" id="inicio">
+      <div class="hero-copy">
+        <h1 class="glitch-title">ghostbar</h1>
+        <p class="subtitle">Diseño visual &amp; publicidad digital</p>
+        <a class="btn-neon hero-button" href="#catalogo">[ EXPLORAR PORTAFOLIO ]</a>
+      </div>
+      <div class="hero-ghost"><img src="avatar.png" alt="Fantasma pixel art de Ghostbar"></div>
+      <div class="pixel-spark spark-one" aria-hidden="true"></div><div class="pixel-spark spark-two" aria-hidden="true"></div><div class="pixel-spark spark-three" aria-hidden="true"></div>
+    </section>
 
-        <!-- Sección: Catálogo de Servicios -->
-<section class="catalog-section">
-    <h2><span class="pixel-deco">✦</span> CATÁLOGO <span class="pixel-deco">✦</span></h2>
-    
-    <!-- SECCIÓN EXPANDIBLE 1: Menús -->
-    <details class="catalog-category">
-        <summary>
-            <span>🍔 Menús para Restaurantes</span>
-            <span class="arrow">▼</span>
-        </summary>
+
+    <section class="catalog-section container" id="catalogo">
+      <div class="section-heading"><span class="pixel-deco">✦</span><h2>CATÁLOGO</h2><span class="pixel-deco">✦</span></div>
+      <p class="section-subtitle">Proyectos &amp; creaciones digitales</p>
+      <details class="catalog-category">
+        <summary><span class="category-icon" aria-hidden="true">🍕</span><span class="category-title">Menús para restaurantes</span><span class="arrow">▼</span></summary>
         <div class="gallery-grid">
-            <!-- Aquí van las imágenes -->
-            <div class="gallery-item">
-                <img src="https://via.placeholder.com/400x500/0D1B2B/2EC6D6?text=Menu+1" alt="Menú 1">
-            </div>
-            <div class="gallery-item">
-                <img src="https://via.placeholder.com/400x500/0D1B2B/8A3BFF?text=Menu+2" alt="Menú 2">
-            </div>
-            <div class="gallery-item">
-                <img src="https://via.placeholder.com/400x500/0D1B2B/56E4F0?text=Menu+3" alt="Menú 3">
-            </div>
+          <button class="gallery-item" aria-label="Ampliar imagen de menú"><img src="https://via.placeholder.com/500x500/0D1B2B/2EC6D6?text=Menu+1" alt="Diseño de menú 1"></button>
+          <button class="gallery-item" aria-label="Ampliar imagen de menú"><img src="https://via.placeholder.com/500x500/0D1B2B/8A3BFF?text=Menu+2" alt="Diseño de menú 2"></button>
+          <button class="gallery-item" aria-label="Ampliar imagen de menú"><img src="https://via.placeholder.com/500x500/0D1B2B/56E4F0?text=Menu+3" alt="Diseño de menú 3"></button>
         </div>
-    </details>
-
-    <!-- SECCIÓN EXPANDIBLE 2: Ejemplo (Podrás borrarla luego) -->
-    <details class="catalog-category">
-        <summary>
-            <span>🎨 Diseño de Logos</span>
-            <span class="arrow">▼</span>
-        </summary>
+      </details>
+      <details class="catalog-category">
+        <summary><span class="category-icon" aria-hidden="true">🎨</span><span class="category-title">Diseño de logos</span><span class="arrow">▼</span></summary>
         <div class="gallery-grid">
-            <div class="gallery-item">
-                <img src="https://via.placeholder.com/400x400/0D1B2B/2EC6D6?text=Logo+1" alt="Logo 1">
-            </div>
-            <div class="gallery-item">
-                <img src="https://via.placeholder.com/400x400/0D1B2B/8A3BFF?text=Logo+2" alt="Logo 2">
-            </div>
+          <button class="gallery-item" aria-label="Ampliar logo"><img src="https://via.placeholder.com/500x500/0D1B2B/2EC6D6?text=Logo+1" alt="Diseño de logo 1"></button>
+          <button class="gallery-item" aria-label="Ampliar logo"><img src="https://via.placeholder.com/500x500/0D1B2B/8A3BFF?text=Logo+2" alt="Diseño de logo 2"></button>
         </div>
-    </details>
+      </details>
+      <details class="catalog-category">
+        <summary><span class="category-icon" aria-hidden="true">📢</span><span class="category-title">Publicidad digital</span><span class="arrow">▼</span></summary>
+        <div class="gallery-grid">
+          <button class="gallery-item" aria-label="Ampliar diseño publicitario"><img src="https://via.placeholder.com/500x500/0D1B2B/2EC6D6?text=Ad+1" alt="Diseño publicitario 1"></button>
+          <button class="gallery-item" aria-label="Ampliar diseño publicitario"><img src="https://via.placeholder.com/500x500/0D1B2B/8A3BFF?text=Ad+2" alt="Diseño publicitario 2"></button>
+          <button class="gallery-item" aria-label="Ampliar diseño publicitario"><img src="https://via.placeholder.com/500x500/0D1B2B/56E4F0?text=Ad+3" alt="Diseño publicitario 3"></button>
+        </div>
+      </details>
+    </section>
 
-</section>
 
-        <!-- Sección: Contacto -->
-        <section class="contact-section">
-            <h2><span class="pixel-deco">✦</span> CONTACTO <span class="pixel-deco">✦</span></h2>
-            <div class="contact-links">
-                <a href="https://github.com/ghostbar" target="_blank" class="btn-neon">
-                    [ GitHub ]
-                </a>
-                <a href="mailto:tu-correo@ejemplo.com" class="btn-neon">
-                    [ Email ]
-                </a>
-                <!-- Agrega LinkedIn u otras redes si quieres -->
-            </div>
-        </section>
-    </main>
+    <section class="contact-section container" id="contacto">
+      <div class="contact-mark" aria-hidden="true">✉</div>
+      <h2>CONTACTO</h2>
+      <p class="contact-intro">¿Tienes un proyecto en mente?<br>Hagámoslo realidad.</p>
+      <a class="btn-neon email-button" href="mailto:kevinortiz2104@proton.me?subject=Solicitud%20de%20dise%C3%B1o%20%E2%80%94%20Ghostbar"><span aria-hidden="true">✉</span> ENVIAR UN EMAIL</a>
+    </section>
+  </main>
 
-    <footer>
-        <p>Diseñado con 🖤 y neón por ghostbar</p>
-    </footer>
+
+  <footer class="site-footer">
+    <div class="footer-main">
+      <a class="footer-brand" href="#inicio"><img src="avatar.png" alt="Fantasma pixel art"><span><strong>ghostbar</strong><small>Diseño visual &amp; publicidad digital</small></span></a>
+      <div class="footer-links"><a href="https://github.com/ghosrtbar" target="_blank" rel="noopener noreferrer">GitHub</a><a href="mailto:kevinortiz2104@proton.me">Email</a></div>
+    </div>
+    <p class="copyright">© 2026 ghostbar</p>
+  </footer>
+
+
+  <dialog class="lightbox" aria-label="Imagen ampliada">
+    <button class="lightbox-close" aria-label="Cerrar imagen ampliada">×</button>
+    <img class="lightbox-image" alt="Vista ampliada del trabajo">
+  </dialog>
+  <script>
+    const lightbox = document.querySelector('.lightbox');
+    const lightboxImage = document.querySelector('.lightbox-image');
+    document.querySelectorAll('.gallery-item').forEach((card) => {
+      card.addEventListener('click', () => {
+        const img = card.querySelector('img');
+        lightboxImage.src = img.src;
+        lightboxImage.alt = img.alt;
+        lightbox.showModal();
+      });
+    });
+    document.querySelector('.lightbox-close').addEventListener('click', () => lightbox.close());
+    lightbox.addEventListener('click', (event) => {
+      if (event.target === lightbox) lightbox.close();
+    });
+  </script>
 </body>
 </html>
