@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080811">
+  <title>ghostbar | Portafolio</title>
+  <link rel="stylesheet" href="./style.css?v=2">
+</head>
+<body>
+  <div class="ambient ambient-one" aria-hidden="true"></div>
+  <div class="ambient ambient-two" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <a class="brand-small" href="#inicio" aria-label="Ghostbar, inicio">ghostbar<span>_</span></a>
+    <nav aria-label="Navegación principal">
+      <a href="#inicio">Inicio</a>
+      <a href="#catalogo">Catálogo</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="avatar-wrap">
+        <img class="avatar" src="./images/avatar.png" alt="Fantasma pixel art de Ghostbar" width="200" height="200">
+      </div>
+      <h1>ghostbar</h1>
+      <p class="subtitle">Diseño visual <span>&amp;</span> publicidad digital</p>
+      <a class="primary-button" href="#catalogo">EXPLORAR PORTAFOLIO <span aria-hidden="true">↓</span></a>
+      <div class="hero-pixel" aria-hidden="true"><span></span><span></span><span></span></div>
+    </section>
+
+
+    <section class="catalog section-shell" id="catalogo">
+      <div class="section-heading">
+        <span class="section-kicker">CREACIONES / 01</span>
+        <h2>CATÁLOGO</h2>
+        <p>Proyectos &amp; creaciones digitales</p>
+        <div class="heading-mark" aria-hidden="true"></div>
+      </div>
+
+      <div class="categories">
+        <details class="category">
+          <summary><span class="category-name"><span class="category-index">01</span> Menús para restaurantes</span><span class="chevron" aria-hidden="true"></span></summary>
+          <div class="gallery" aria-label="Galería de menús">
+            <button class="gallery-card" type="button"><img src="./images/menus/menu-01.svg" alt="Espacio para diseño de menú 1" loading="lazy"></button>
+            <button class="gallery-card" type="button"><img src="./images/menus/menu-02.svg" alt="Espacio para diseño de menú 2" loading="lazy"></button>
+            <button class="gallery-card" type="button"><img src="./images/menus/menu-03.svg" alt="Espacio para diseño de menú 3" loading="lazy"></button>
+          </div>
+        </details>
+        <details class="category">
+          <summary><span class="category-name"><span class="category-index">02</span> Diseño de logos</span><span class="chevron" aria-hidden="true"></span></summary>
+          <div class="gallery" aria-label="Galería de logos">
+            <button class="gallery-card" type="button"><img src="./images/logos/logo-01.svg" alt="Espacio para diseño de logo 1" loading="lazy"></button>
+            <button class="gallery-card" type="button"><img src="./images/logos/logo-02.svg" alt="Espacio para diseño de logo 2" loading="lazy"></button>
+          </div>
+        </details>
+        <details class="category">
+          <summary><span class="category-name"><span class="category-index">03</span> Publicidad digital</span><span class="chevron" aria-hidden="true"></span></summary>
+          <div class="gallery" aria-label="Galería de publicidad digital">
+            <button class="gallery-card" type="button"><img src="./images/ads/ad-01.svg" alt="Espacio para publicidad digital 1" loading="lazy"></button>
+            <button class="gallery-card" type="button"><img src="./images/ads/ad-02.svg" alt="Espacio para publicidad digital 2" loading="lazy"></button>
+            <button class="gallery-card" type="button"><img src="./images/ads/ad-03.svg" alt="Espacio para publicidad digital 3" loading="lazy"></button>
+          </div>
+        </details>
+      </div>
+    </section>
+
+
+    <section class="contact section-shell" id="contacto">
+      <div class="section-heading">
+        <span class="section-kicker">CONEXIÓN / 02</span>
+        <h2>CONTACTO</h2>
+        <p>¿Tienes un proyecto en mente?</p>
+        <p class="contact-secondary">Hagámoslo realidad.</p>
+      </div>
+      <a class="primary-button email-button" href="mailto:kevinortiz2104@proton.me?subject=Solicitud%20de%20dise%C3%B1o%20-%20Ghostbar">ENVIAR UN EMAIL <span aria-hidden="true">↗</span></a>
+      <div class="contact-links">
+        <a href="https://github.com/ghosrtbar" target="_blank" rel="noopener noreferrer">GitHub <span>↗</span></a>
+        <a href="mailto:kevinortiz2104@proton.me">Email <span>↗</span></a>
+      </div>
+    </section>
+  </main>
+
+
+  <footer class="site-footer">
+    <a class="footer-brand" href="#inicio">ghostbar</a>
+    <div class="footer-links"><a href="https://github.com/ghosrtbar" target="_blank" rel="noopener noreferrer">GitHub</a><a href="mailto:kevinortiz2104@proton.me">Email</a></div>
+    <p>© 2026 ghostbar</p>
+  </footer>
+
+
+  <dialog class="lightbox" aria-label="Imagen ampliada">
+    <button class="lightbox-close" type="button" aria-label="Cerrar imagen">×</button>
+    <img class="lightbox-image" src="" alt="Imagen ampliada del portafolio">
+  </dialog>
+  <script>
+    (() => {
+      const dialog = document.querySelector('.lightbox');
+      const lightboxImage = document.querySelector('.lightbox-image');
+      document.querySelectorAll('.gallery-card').forEach((card) => {
+        card.addEventListener('click', () => {
+          const image = card.querySelector('img');
+          lightboxImage.src = image.src;
+          lightboxImage.alt = image.alt;
+          dialog.showModal();
+        });
+      });
+      document.querySelector('.lightbox-close').addEventListener('click', () => dialog.close());
+      dialog.addEventListener('click', (event) => {
+        if (event.target === dialog) dialog.close();
+      });
+      dialog.addEventListener('close', () => { lightboxImage.src = ''; });
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && dialog.open) dialog.close();
+      });
+    })();
+  </script>
+</body>
+</html>
