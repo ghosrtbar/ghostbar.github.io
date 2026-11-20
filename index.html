@@ -4,8 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#080811">
+  <meta name="description" content="Ghostbar — Diseño visual, menús, logos y publicidad digital.">
   <title>ghostbar | Portafolio</title>
-  <link rel="stylesheet" href="./style.css?v=2">
+  <link rel="stylesheet" href="./style.css?v=3">
 </head>
 <body>
   <div class="ambient ambient-one" aria-hidden="true"></div>
@@ -14,18 +15,14 @@
   <header class="site-header">
     <a class="brand-small" href="#inicio" aria-label="Ghostbar, inicio">ghostbar<span>_</span></a>
     <nav aria-label="Navegación principal">
-      <a href="#inicio">Inicio</a>
-      <a href="#catalogo">Catálogo</a>
-      <a href="#contacto">Contacto</a>
+      <a href="#inicio">Inicio</a><a href="#catalogo">Catálogo</a><a href="#contacto">Contacto</a>
     </nav>
   </header>
 
 
   <main>
     <section class="hero" id="inicio">
-      <div class="avatar-wrap">
-        <img class="avatar" src="./images/avatar.png" alt="Fantasma pixel art de Ghostbar" width="200" height="200">
-      </div>
+      <div class="avatar-wrap"><img class="avatar" src="./images/avatar.png" alt="Fantasma pixel art de Ghostbar" width="200" height="200"></div>
       <h1>ghostbar</h1>
       <p class="subtitle">Diseño visual <span>&amp;</span> publicidad digital</p>
       <a class="primary-button" href="#catalogo">EXPLORAR PORTAFOLIO <span aria-hidden="true">↓</span></a>
@@ -33,88 +30,133 @@
     </section>
 
 
-    <section class="catalog section-shell" id="catalogo">
-      <div class="section-heading">
-        <span class="section-kicker">CREACIONES / 01</span>
-        <h2>CATÁLOGO</h2>
-        <p>Proyectos &amp; creaciones digitales</p>
-        <div class="heading-mark" aria-hidden="true"></div>
+    <section class="services section-shell reveal" id="servicios" aria-label="Servicios">
+      <div class="section-heading compact-heading">
+        <span class="section-kicker">LO QUE PUEDO CREAR / 01</span>
+        <h2>SERVICIOS</h2>
+        <p>Diseños visuales para que tu negocio destaque.</p>
       </div>
-
-      <div class="categories">
-        <details class="category">
-          <summary><span class="category-name"><span class="category-index">01</span> Menús para restaurantes</span><span class="chevron" aria-hidden="true"></span></summary>
-          <div class="gallery" aria-label="Galería de menús">
-            <button class="gallery-card" type="button"><img src="./images/menus/menu-01.svg" alt="Espacio para diseño de menú 1" loading="lazy"></button>
-            <button class="gallery-card" type="button"><img src="./images/menus/menu-02.svg" alt="Espacio para diseño de menú 2" loading="lazy"></button>
-            <button class="gallery-card" type="button"><img src="./images/menus/menu-03.svg" alt="Espacio para diseño de menú 3" loading="lazy"></button>
-          </div>
-        </details>
-        <details class="category">
-          <summary><span class="category-name"><span class="category-index">02</span> Diseño de logos</span><span class="chevron" aria-hidden="true"></span></summary>
-          <div class="gallery" aria-label="Galería de logos">
-            <button class="gallery-card" type="button"><img src="./images/logos/logo-01.svg" alt="Espacio para diseño de logo 1" loading="lazy"></button>
-            <button class="gallery-card" type="button"><img src="./images/logos/logo-02.svg" alt="Espacio para diseño de logo 2" loading="lazy"></button>
-          </div>
-        </details>
-        <details class="category">
-          <summary><span class="category-name"><span class="category-index">03</span> Publicidad digital</span><span class="chevron" aria-hidden="true"></span></summary>
-          <div class="gallery" aria-label="Galería de publicidad digital">
-            <button class="gallery-card" type="button"><img src="./images/ads/ad-01.svg" alt="Espacio para publicidad digital 1" loading="lazy"></button>
-            <button class="gallery-card" type="button"><img src="./images/ads/ad-02.svg" alt="Espacio para publicidad digital 2" loading="lazy"></button>
-            <button class="gallery-card" type="button"><img src="./images/ads/ad-03.svg" alt="Espacio para publicidad digital 3" loading="lazy"></button>
-          </div>
-        </details>
+      <div class="service-grid">
+        <article class="service-item"><span class="service-symbol">▤</span><h3>Menús</h3><p>Diseños que hacen más atractivos tus productos.</p></article>
+        <article class="service-item"><span class="service-symbol">◇</span><h3>Identidad visual</h3><p>Logos e identidad que ayudan a ser reconocible.</p></article>
+        <article class="service-item"><span class="service-symbol">▧</span><h3>Publicidad digital</h3><p>Creatividades para promocionar y comunicar.</p></article>
       </div>
     </section>
 
 
-    <section class="contact section-shell" id="contacto">
-      <div class="section-heading">
-        <span class="section-kicker">CONEXIÓN / 02</span>
-        <h2>CONTACTO</h2>
-        <p>¿Tienes un proyecto en mente?</p>
-        <p class="contact-secondary">Hagámoslo realidad.</p>
+    <section class="catalog section-shell" id="catalogo">
+      <div class="section-heading reveal">
+        <span class="section-kicker">CREACIONES / 02</span><h2>CATÁLOGO</h2><p>Proyectos &amp; creaciones digitales</p><div class="heading-mark" aria-hidden="true"></div>
       </div>
-      <a class="primary-button email-button" href="mailto:kevinortiz2104@proton.me?subject=Solicitud%20de%20dise%C3%B1o%20-%20Ghostbar">ENVIAR UN EMAIL <span aria-hidden="true">↗</span></a>
-      <div class="contact-links">
-        <a href="https://github.com/ghosrtbar" target="_blank" rel="noopener noreferrer">GitHub <span>↗</span></a>
-        <a href="mailto:kevinortiz2104@proton.me">Email <span>↗</span></a>
+
+      <div class="categories">
+        <section class="category reveal" aria-labelledby="menus-title">
+          <div class="category-heading"><h3 id="menus-title"><span class="category-index">01</span> Menús para restaurantes</h3><span class="category-note">DISEÑO DE PRODUCTO</span></div>
+          <div class="carousel" data-carousel>
+            <button class="carousel-arrow prev" type="button" aria-label="Imagen anterior en menús">←</button>
+            <div class="gallery" tabindex="0" aria-label="Carrusel de menús">
+              <button class="gallery-card" type="button"><img src="./images/menus/menu-01.svg" alt="Proyecto de menú 1" loading="lazy"></button>
+              <button class="gallery-card" type="button"><img src="./images/menus/menu-02.svg" alt="Proyecto de menú 2" loading="lazy"></button>
+              <button class="gallery-card" type="button"><img src="./images/menus/menu-03.svg" alt="Proyecto de menú 3" loading="lazy"></button>
+            </div>
+            <button class="carousel-arrow next" type="button" aria-label="Imagen siguiente en menús">→</button>
+            <div class="carousel-meta"><span class="carousel-count">01 / 03</span><div class="carousel-progress"><span></span></div><span class="swipe-hint">DESLIZA PARA EXPLORAR</span></div>
+          </div>
+        </section>
+
+        <section class="category reveal" aria-labelledby="logos-title">
+          <div class="category-heading"><h3 id="logos-title"><span class="category-index">02</span> Diseño de logos</h3><span class="category-note">IDENTIDAD VISUAL</span></div>
+          <div class="carousel" data-carousel>
+            <button class="carousel-arrow prev" type="button" aria-label="Logo anterior">←</button>
+            <div class="gallery" tabindex="0" aria-label="Carrusel de logos">
+              <button class="gallery-card" type="button"><img src="./images/logos/logo-01.svg" alt="Proyecto de logo 1" loading="lazy"></button>
+              <button class="gallery-card" type="button"><img src="./images/logos/logo-02.svg" alt="Proyecto de logo 2" loading="lazy"></button>
+            </div>
+            <button class="carousel-arrow next" type="button" aria-label="Logo siguiente">→</button>
+            <div class="carousel-meta"><span class="carousel-count">01 / 02</span><div class="carousel-progress"><span></span></div><span class="swipe-hint">DESLIZA PARA EXPLORAR</span></div>
+          </div>
+        </section>
+
+        <section class="category reveal" aria-labelledby="ads-title">
+          <div class="category-heading"><h3 id="ads-title"><span class="category-index">03</span> Publicidad digital</h3><span class="category-note">CREATIVIDAD PROMOCIONAL</span></div>
+          <div class="carousel" data-carousel>
+            <button class="carousel-arrow prev" type="button" aria-label="Publicidad anterior">←</button>
+            <div class="gallery" tabindex="0" aria-label="Carrusel de publicidad digital">
+              <button class="gallery-card" type="button"><img src="./images/ads/ad-01.svg" alt="Proyecto publicitario 1" loading="lazy"></button>
+              <button class="gallery-card" type="button"><img src="./images/ads/ad-02.svg" alt="Proyecto publicitario 2" loading="lazy"></button>
+              <button class="gallery-card" type="button"><img src="./images/ads/ad-03.svg" alt="Proyecto publicitario 3" loading="lazy"></button>
+            </div>
+            <button class="carousel-arrow next" type="button" aria-label="Publicidad siguiente">→</button>
+            <div class="carousel-meta"><span class="carousel-count">01 / 03</span><div class="carousel-progress"><span></span></div><span class="swipe-hint">DESLIZA PARA EXPLORAR</span></div>
+          </div>
+        </section>
       </div>
+    </section>
+
+
+    <section class="process section-shell reveal" id="proceso">
+      <div class="section-heading compact-heading"><span class="section-kicker">SENCILLO Y DIRECTO / 03</span><h2>¿CÓMO TRABAJO?</h2><p>De la idea al diseño final.</p></div>
+      <div class="process-steps">
+        <article><span class="step-number">01</span><h3>Hablamos</h3><p>Me cuentas qué necesitas y qué quieres lograr.</p></article>
+        <article><span class="step-number">02</span><h3>Diseñamos</h3><p>Preparo una propuesta visual para tu proyecto.</p></article>
+        <article><span class="step-number">03</span><h3>Entregamos</h3><p>Revisamos los detalles y te entrego el diseño final.</p></article>
+      </div>
+    </section>
+
+
+    <section class="contact section-shell reveal" id="contacto">
+      <div class="section-heading"><span class="section-kicker">CONEXIÓN / 04</span><h2>CONTACTO</h2><p>¿Tienes un proyecto en mente?</p><p class="contact-secondary">Hagámoslo realidad.</p></div>
+      <a class="primary-button email-button" href="mailto:kevinortiz2104@proton.me?subject=Solicitud%20de%20dise%C3%B1o%20-%20Ghostbar">HABLEMOS DE TU PROYECTO <span aria-hidden="true">↗</span></a>
+      <div class="contact-links"><a href="https://github.com/ghosrtbar" target="_blank" rel="noopener noreferrer">GitHub <span>↗</span></a><a href="mailto:kevinortiz2104@proton.me">Email <span>↗</span></a></div>
     </section>
   </main>
 
 
-  <footer class="site-footer">
-    <a class="footer-brand" href="#inicio">ghostbar</a>
-    <div class="footer-links"><a href="https://github.com/ghosrtbar" target="_blank" rel="noopener noreferrer">GitHub</a><a href="mailto:kevinortiz2104@proton.me">Email</a></div>
-    <p>© 2026 ghostbar</p>
-  </footer>
+  <footer class="site-footer"><a class="footer-brand" href="#inicio">ghostbar</a><div class="footer-links"><a href="https://github.com/ghosrtbar" target="_blank" rel="noopener noreferrer">GitHub</a><a href="mailto:kevinortiz2104@proton.me">Email</a></div><p>© 2026 ghostbar</p></footer>
 
 
-  <dialog class="lightbox" aria-label="Imagen ampliada">
-    <button class="lightbox-close" type="button" aria-label="Cerrar imagen">×</button>
-    <img class="lightbox-image" src="" alt="Imagen ampliada del portafolio">
-  </dialog>
+  <dialog class="lightbox" aria-label="Imagen ampliada"><button class="lightbox-close" type="button" aria-label="Cerrar imagen">×</button><img class="lightbox-image" src="" alt="Imagen ampliada del portafolio"></dialog>
   <script>
     (() => {
+      const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
       const dialog = document.querySelector('.lightbox');
       const lightboxImage = document.querySelector('.lightbox-image');
-      document.querySelectorAll('.gallery-card').forEach((card) => {
-        card.addEventListener('click', () => {
-          const image = card.querySelector('img');
-          lightboxImage.src = image.src;
-          lightboxImage.alt = image.alt;
-          dialog.showModal();
-        });
-      });
+
+      // Accessible lightbox with restore-focus and escape support.
+      let lastTrigger = null;
+      document.querySelectorAll('.gallery-card').forEach(card => card.addEventListener('click', () => {
+        const image = card.querySelector('img'); lastTrigger = card;
+        lightboxImage.src = image.src; lightboxImage.alt = image.alt;
+        dialog.showModal();
+      }));
       document.querySelector('.lightbox-close').addEventListener('click', () => dialog.close());
-      dialog.addEventListener('click', (event) => {
-        if (event.target === dialog) dialog.close();
-      });
-      dialog.addEventListener('close', () => { lightboxImage.src = ''; });
-      document.addEventListener('keydown', (event) => {
-        if (event.key === 'Escape' && dialog.open) dialog.close();
+      dialog.addEventListener('click', event => { if (event.target === dialog) dialog.close(); });
+      dialog.addEventListener('close', () => { lightboxImage.src = ''; if (lastTrigger) lastTrigger.focus(); });
+
+      // Scroll reveal: enter slowly, fade away when section leaves view.
+      const revealTargets = document.querySelectorAll('.reveal');
+      if ('IntersectionObserver' in window && !reducedMotion) {
+        const revealObserver = new IntersectionObserver(entries => entries.forEach(entry => {
+          entry.target.classList.toggle('is-visible', entry.isIntersecting);
+        }), { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+        revealTargets.forEach(target => revealObserver.observe(target));
+      } else revealTargets.forEach(target => target.classList.add('is-visible'));
+
+      // Independent carousels; touch scroll is native, arrows move one card.
+      document.querySelectorAll('[data-carousel]').forEach(carousel => {
+        const track = carousel.querySelector('.gallery'); const cards = [...track.querySelectorAll('.gallery-card')];
+        const prev = carousel.querySelector('.prev'); const next = carousel.querySelector('.next');
+        const count = carousel.querySelector('.carousel-count'); const progress = carousel.querySelector('.carousel-progress span');
+        const getIndex = () => {
+          const cardWidth = cards[0].getBoundingClientRect().width + parseFloat(getComputedStyle(track).columnGap || getComputedStyle(track).gap || 0);
+          return Math.min(cards.length - 1, Math.max(0, Math.round(track.scrollLeft / cardWidth)));
+        };
+        const update = () => { const i = getIndex(); count.textContent = `${String(i+1).padStart(2,'0')} / ${String(cards.length).padStart(2,'0')}`; progress.style.width = `${((i+1)/cards.length)*100}%`; prev.disabled = i===0; next.disabled = i===cards.length-1; };
+        const move = dir => { const i = getIndex(); cards[Math.min(cards.length-1, Math.max(0, i+dir))].scrollIntoView({behavior:reducedMotion?'auto':'smooth',block:'nearest',inline:'start'}); };
+        prev.addEventListener('click', () => move(-1)); next.addEventListener('click', () => move(1));
+        track.addEventListener('scroll', update, {passive:true});
+        track.addEventListener('keydown', event => { if(event.key==='ArrowLeft') move(-1); if(event.key==='ArrowRight') move(1); });
+        update();
       });
     })();
   </script>
