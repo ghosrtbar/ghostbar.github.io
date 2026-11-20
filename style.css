@@ -1,0 +1,179 @@
+/* --- VARIABLES DE COLOR (Basadas en tu imagen) --- */
+:root {
+    --bg-dark: #0A0F1A;
+    --bg-panel: #0D1B2B;
+    --neon-cyan: #2EC6D6;
+    --neon-cyan-light: #56E4F0;
+    --neon-purple: #8A3BFF;
+    --neon-purple-light: #B374FF;
+    --text-main: #FFFFFF;
+    --text-muted: #D9C5FF;
+}
+
+/* --- RESET Y ESTILOS BASE --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Efecto de resplandor de fondo */
+.bg-glow {
+    position: fixed;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at 50% 50%, rgba(46, 198, 214, 0.08) 0%, rgba(138, 59, 255, 0.05) 40%, transparent 70%);
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* --- CONTENEDOR PRINCIPAL --- */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem;
+    flex: 1;
+}
+
+/* --- HERO / HEADER --- */
+.hero {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.ghost-avatar {
+    font-size: 5rem;
+    margin-bottom: 1rem;
+    filter: drop-shadow(0 0 15px var(--neon-cyan)) drop-shadow(0 0 30px var(--neon-purple));
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.glitch-title {
+    font-family: 'VT323', monospace;
+    font-size: 4rem;
+    color: var(--neon-cyan-light);
+    text-shadow: 0 0 10px var(--neon-cyan), 2px 2px 0px var(--neon-purple);
+    letter-spacing: 2px;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    font-weight: 300;
+}
+
+/* --- SECCIONES Y TÍTULOS --- */
+section {
+    margin-bottom: 4rem;
+}
+
+h2 {
+    font-family: 'VT323', monospace;
+    font-size: 2rem;
+    text-align: center;
+    color: var(--neon-purple-light);
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.pixel-deco {
+    color: var(--neon-cyan);
+    font-size: 1.2rem;
+}
+
+/* --- HABILIDADES --- */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.skill-card {
+    background-color: var(--bg-panel);
+    border: 1px solid var(--neon-cyan);
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(46, 198, 214, 0.2);
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--neon-purple);
+    box-shadow: 0 0 20px rgba(138, 59, 255, 0.5);
+}
+
+.skill-card h3 {
+    color: var(--neon-cyan-light);
+    font-family: 'VT323', monospace;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.skill-card p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+/* --- CONTACTO --- */
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.btn-neon {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--neon-cyan-light);
+    font-family: 'VT323', monospace;
+    font-size: 1.5rem;
+    padding: 0.5rem 1.5rem;
+    border: 2px solid var(--neon-cyan);
+    border-radius: 4px;
+    background: transparent;
+    transition: all 0.3s ease;
+    text-shadow: 0 0 5px var(--neon-cyan);
+    box-shadow: 0 0 10px rgba(46, 198, 214, 0.3), inset 0 0 10px rgba(46, 198, 214, 0.1);
+}
+
+.btn-neon:hover {
+    background: var(--neon-cyan);
+    color: var(--bg-dark);
+    text-shadow: none;
+    box-shadow: 0 0 20px var(--neon-cyan), 0 0 40px var(--neon-purple);
+    border-color: var(--neon-purple-light);
+}
+
+/* --- FOOTER --- */
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.8rem;
+    color: var(--bg-panel-light);
+    border-top: 1px solid rgba(138, 59, 255, 0.2);
+    color: var(--text-muted);
+}
